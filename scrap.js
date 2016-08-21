@@ -7,7 +7,7 @@ let questions = [];
 
 module.exports = {
     quesAns : function() {
-        return new Promise((resolve, reject) => {
+        return new Promise(function(resolve, reject){
             osmosis
                 .get('http://www.indiabix.com/general-knowledge/questions-and-answers')
                 .find('div ul:only-child a')
