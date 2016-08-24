@@ -11,7 +11,6 @@ const app = express();
 
 const path = require('path');
 
-app.use("/" , express.static( path.join( __dirname , "public_html") ) );
 // const server = http.Server(app);
 
 // const io = socketio(server);
@@ -24,11 +23,6 @@ app.use('/', express.static(__dirname + '/public_html'));
 //     });
 // });
 
-
-
-app.listen(8080 , function () {
-    console.log('Server is runing on port 8080');
-})
 
 app.listen(app.get('port') , function () {
     console.log('Server is runing on port:' + app.get('port'));
